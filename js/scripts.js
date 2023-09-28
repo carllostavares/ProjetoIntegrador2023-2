@@ -1,15 +1,15 @@
 var answers = {};
 
-var question_one = document.getElementById('question-1');
-var question_two = document.getElementById('question-2');
-var question_three = document.getElementById('question-3');
-var question_four = document.getElementById('question-4');
-var question_five = document.getElementById('question-5');
+var question_one = document.getElementById('step-1');
+var question_two = document.getElementById('step-2');
+var question_three = document.getElementById('step-3');
+var question_four = document.getElementById('step-4');
+var question_five = document.getElementById('step-5');
 
 function storeAnswer(question_number, event){
     if(event.target.type === 'radio'){
         console.log(event.target.value);
-        answers['question'+question_number] = parseInt(event.target.value);
+        answers['step'+question_number] = parseInt(event.target.value);
         console.log(answers);
     }
 }
@@ -32,18 +32,29 @@ question_five.addEventListener('click', function(event){
 
 function totalScore(){
     var total_score = 
-    answers.question1+
-    answers.question2+
-    answers.question3+
-    answers.question4+ 
-    answers.question5;
+    answers.step1+
+    answers.step2+
+    answers.step3+
+    answers.step4+ 
+    answers.step5;
     
     return total_score;
 }
 
 function getInfoBasedOnScore(){
     if(totalScore() < 6){
-        var score_info = "Você tirou uma nota abaixo da média esperada! Continue estudado e tente novamente.";
+        var score_info = "Você tirou uma nota abaixo da média esperada! Continue estudado e tente novamente. \n Conheça a instituição do Senac e aumente seus conhecimentos:";
+        var iframe = document.createElement("iframe");
+
+        // Defina os atributos do iframe
+        iframe.src = "https://www.youtube.com/embed/hR_VC3EfxLs?si=yrUtZaIHJYydGuqu"; // URL do conteúdo do iframe
+        iframe.width = "560"; // Largura do iframe em pixels
+        iframe.height = "315"; // Altura do iframe em pixels
+        iframe.frameBorder = "0"; // Desativar a borda do iframe (opcional)
+    
+        // Adicione o iframe ao elemento de contêiner na página
+        var container = document.getElementById("iframeContainer");
+        container.appendChild(iframe);
     }if(totalScore() >= 6 && totalScore() < 8){
         var score_info = "Parabéns! Você tirou uma boa!";
     }if(totalScore() >=8){

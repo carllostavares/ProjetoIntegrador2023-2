@@ -1,0 +1,187 @@
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="PWA Workshop">
+  <meta name="apple-mobile-web-app-title" content="PWA Workshop">
+  <meta name="msapplication-starturl" content="/index.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Avaliação Sindipeças</title>
+  <link rel="manifest" href="manifest.json"> 
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="icon" href="img/LOGO SINDIPEÇAS azu;.png" type="image/png" />
+</head>
+
+<body>
+  <nav class="d-flex justify-content-center container-fluid navbar navbar-light shadow p-3 mb-5 rounded border-bottom-0"
+    style="background-color: #003778">
+    <a class="navbar-brand ml-4">
+      <img src="img/LOGO SINDIPEÇAS BRANCO 1.png" width="326" height="72" alt="" />
+    </a>
+  </nav>
+  <div class="d-flex justify-content-center">
+    <div class="row">
+      <div>
+        <h2 class="text-center text-lg-left mb-5">Avaliação Sindipeças</h2>
+        <div class="progress-container">
+          <div class="progress-bar" id="progress_bar"></div>
+        </div>
+        <form id="meuform" class="questions_box bg-light shadow">
+          <div id="step-1" class="step active" name="questao1">
+            <h2>Questão 1</h2>
+            <h3>Qual é a função do filtro de ar em um veículo?</h3>
+            <input class="form-check-input" id="question-1-answer-a" type="radio" name="questao1" value="2"
+              required />Filtrar partículas de poeira e sujeira do ar que entra no
+            motor.<br>
+            <input class="form-check-input" id="question-1-answer-b" type="radio" name="questao1" value="0"
+              required />Controlar a temperatura do motor.<br />
+            <input class="form-check-input" id="question-1-answer-c" type="radio" name="questao1" value="0"
+              required />Melhorar o consumo de combustível.<br />
+            </label>
+            <!-- <input type="button" id="submit1" class="button next-step" onclick="validarPergunta(1)" value="Enviar Resposta"> -->
+            <!-- <div id="submit1" class="button">Enviar Resposta</div> -->
+            <button id="submit1" class="button next-step">
+              Enviar Resposta
+            </button>
+            <div class="clearfix"></div>
+          </div>
+
+          <div class="step" id="step-2">
+            <h2>Questão 2</h2>
+            <h3>
+              Qual é a principal função das pastilhas de freio em um carro ou
+              moto?
+            </h3>
+            <input class="form-check-input" id="question-2-answer-a" type="radio" name="questao2" value="2"
+              required />Controlar a pressão dos pneus.<br />
+            <input class="form-check-input" id="question-2-answer-b" type="radio" name="questao2" value="0"
+              required />Fornecer energia para o motor.<br />
+            <input class="form-check-input" id="question-2-answer-c" type="radio" name="questao2" value="0"
+              required />Fornecer atrito para reduzir a velocidade do veículo.<br />
+            <button id="submit2" class="button next-step">
+              Enviar Resposta
+            </button>
+            <!--  <input type="submit" id="submit2" class="button" onclick="validarForm()" value="Enviar Resposta"> -->
+            <div class="clearfix"></div>
+          </div>
+
+          <div class="step" id="step-3">
+            <h2>Questão 3</h2>
+            <h3>O que é um alternador em um veículo?</h3>
+            <input class="form-check-input" id="question-3-answer-a" type="radio" name="questao3" value="2" />Uma peça
+            responsável por manter o veículo na direção correta.<br />
+            <input class="form-check-input" id="question-3-answer-b" type="radio" name="questao3" value="0" />Um
+            dispositivo que produz eletricidade para carregar a bateria e
+            alimentar os componentes elétricos do veículo.<br />
+            <input class="form-check-input" id="question-3-answer-c" type="radio" name="questao3" value="0" />Uma peça
+            que controla a temperatura do motor.<br />
+            <button id="submit3" class="button next-step">
+              Enviar Resposta
+            </button>
+            <div class="clearfix"></div>
+          </div>
+
+          <div class="step" id="step-4">
+            <h2>Questão 4</h2>
+            <h3>Qual é a função do óleo do motor em um veículo?</h3>
+            <input class="form-check-input" id="question-1-answer-a" type="radio" name="questao4" value="2" />Lubrificar
+            as rodas do veículo.<br />
+            <input class="form-check-input" id="question-1-answer-b" type="radio" name="questao4" value="0" />Refrescar
+            o sistema de ar condicionado.<br />
+            <input class="form-check-input" id="question-1-answer-c" type="radio" name="questao4" value="0" />Lubrificar
+            e proteger as peças móveis do motor.<br />
+            <button id="submit4" class="button next-step">
+              Enviar Resposta
+            </button>
+            <div class="clearfix"></div>
+          </div>
+
+          <div class="step" id="step-5">
+            <h2>Questão 5</h2>
+            <h3>O que é uma vela de ignição e qual é sua função?</h3>
+            <input class="form-check-input" id="question-1-answer-a" type="radio" name="questao5" value="2" />Uma peça
+            que controla a pressão dos pneus.<br />
+            <input class="form-check-input" id="question-1-answer-b" type="radio" name="questao5" value="0" />Um
+            dispositivo que fornece faíscas para inflamar a mistura
+            ar/combustível no motor.<br />
+            <input class="form-check-input" id="question-1-answer-c" type="radio" name="questao5" value="0" />Um
+            componente que controla a velocidade máxima do veículo.<br />
+            <button type="submit" id="submit5" class="button next-step">
+              Enviar Resposta
+            </button>
+            <div class="clearfix"></div>
+          </div>
+
+          <div class="container step" id="step-6">
+            <h2>Obrigado por responder esse questionário!</h2>
+            <h3>A sua nota é:</h3>
+            <div class="d-flex justify-content-center align-items-center">
+              <h1 class="texto circulo text-center" id="printtotalscore">Texto centralizado</h1>
+            </div>
+            <p class="font-weight-bold text-center" id="printscoreinfo"></p>
+            <div class="text-center" id="iframeContainer"></div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="/js/jquery-3.3.1.slim.min.js"></script>
+  <script type="text/javascript" src="/js/popper.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <script type="text/javascript" src="pwabuilder-sw.js"" ></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("meuform");
+      const steps = document.querySelectorAll(".step");
+      const nextButtons = document.querySelectorAll(".next-step");
+      let currentStep = 0;
+
+      function showStep(stepNumber) {
+        steps[currentStep].classList.remove("active");
+        currentStep = stepNumber;
+        steps[currentStep].classList.add("active");
+      }
+
+      nextButtons.forEach(function (button, index) {
+        button.addEventListener("click", function (event) {
+          event.preventDefault();
+
+          const radios = document.querySelectorAll(
+            `input[name="questao${currentStep + 1}"]:checked`,
+          );
+
+          if (radios.length === 0) {
+            alert("Por favor, selecione uma opção.");
+          } else {
+            if (currentStep < steps.length - 1) {
+              showStep(currentStep + 1);
+            }
+          }
+        });
+      });
+
+      form.addEventListener("submit", function (event) {
+        const radios = document.querySelectorAll(
+          `input[name="questao${currentStep + 1}"]:checked`,
+        );
+
+        if (radios.length === 0) {
+          alert("Por favor, selecione uma opção.");
+          event.preventDefault();
+        }
+      });
+
+      // Exibe a primeira etapa no início
+      showStep(currentStep);
+    });
+  </script>
+</body>
+
+</html>

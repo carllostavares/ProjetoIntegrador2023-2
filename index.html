@@ -1,90 +1,70 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
+
 <head>
   <meta charset="utf-8">
-
-  <title>Security Survey</title>
-  <meta name="description" content="Survey">
-  <meta name="author" content="Luke Lehane">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="PWA Workshop">
+  <meta name="apple-mobile-web-app-title" content="PWA Workshop">
+  <meta name="msapplication-starturl" content="/index.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Avaliação Sindipeças</title>
+  <link rel="manifest" href="manifest.json"> 
   <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/LOGO SINDIPEÇAS azu;.png" type="image/png">
 </head>
 
 <body>
-  <div class="container">	
-    <div class="row">
-  	  <div class="two-thirds column">
-        <h2>Avaliação Sindi Peças</h2>
-
-        <div id="progress_bar"></div>
-  	  	<form class="questions_box">
-
-  	  		<div id="question-1">
-  	  		  <h2>Questão 1</h2>
-  	  			<h3>Qual é a função do filtro de ar em um veículo?</h3>
-  	  			<input id="question-1-answer-a" type="radio" name="favelang" value=2>Filtrar partículas de poeira e sujeira do ar que entra no motor.<br>
-  				  <input id="question-1-answer-b" type="radio" name="favelang" value=0>Controlar a temperatura do motor.<br>
-  				  <input id="question-1-answer-c" type="radio" name="favelang" value=0>Melhorar o consumo de combustível.<br>
-  				  <div id="submit1" class="button">Enviar Resposta</div>
-            <div class="clearfix"></div>
-  			  </div>
-
-  			 <div id="question-2">
-  				 <h2>Questão 2</h2>
-  				 <h3>Qual é a principal função das pastilhas de freio em um carro ou moto?</h3>
-  	  		 <input id="question-2-answer-a" type="radio" name="favelang" value="2">Controlar a pressão dos pneus.<br>
-  				 <input id="question-2-answer-b" type="radio" name="favelang" value="0">Fornecer energia para o motor.<br>
-  				 <input id="question-2-answer-c" type="radio" name="favelang" value="0">Fornecer atrito para reduzir a velocidade do veículo.<br>
-  				 <div id="submit2" class="button">Enviar Resposta</div>
-           <div class="clearfix"></div>
-  			 </div>
-  			
-  			 <div id="question-3">	
-  				 <h2>Questão 3</h2>
-  				 <h3>O que é um alternador em um veículo?</h3>
-  	  		 <input id="question-3-answer-a" type="radio" name="favelang" value="2">Uma peça responsável por manter o veículo na direção correta.<br>
-  				 <input id="question-3-answer-b" type="radio" name="favelang" value="0">Um dispositivo que produz eletricidade para carregar a bateria e alimentar os componentes elétricos do veículo.<br>
-  				 <input id="question-3-answer-c" type="radio" name="favelang" value="0">Uma peça que controla a temperatura do motor.<br>
-  				 <div id="submit3" class="button">Enviar Resposta</div>
-           <div class="clearfix"></div>
-  			 </div>
-
-         <div id="question-4">
-            <h2>Questão 4</h2>
-            <h3>Qual é a função do óleo do motor em um veículo?</h3>
-            <input id="question-1-answer-a" type="radio" name="favelang" value="2">Lubrificar as rodas do veículo.<br>
-            <input id="question-1-answer-b" type="radio" name="favelang" value="0">Refrescar o sistema de ar condicionado.<br>
-            <input id="question-1-answer-c" type="radio" name="favelang" value="0">Lubrificar e proteger as peças móveis do motor.<br>
-            <div id="submit4" class="button">Enviar Resposta</div>
-            <div class="clearfix"></div>
-          </div>
-
-          <div id="question-5">
-            <h2>Questão 5</h2>
-            <h3>O que é uma vela de ignição e qual é sua função?</h3>
-            <input id="question-1-answer-a" type="radio" name="favelang" value="2">Uma peça que controla a pressão dos pneus.<br>
-            <input id="question-1-answer-b" type="radio" name="favelang" value="0">Um dispositivo que fornece faíscas para inflamar a mistura ar/combustível no motor.<br>
-            <input id="question-1-answer-c" type="radio" name="favelang" value="0">Um componente que controla a velocidade máxima do veículo.<br>
-            <div id="submit5" class="button">Enviar Resposta</div>
-            <div class="clearfix"></div>
-          </div>
-
-         <div id="question-6"> 
-           <h2>Obrigado por responder esse questionário!</h2>
-           <h3>A sua nota é: </h3>
-           <h1 id=printtotalscore></h1>
-           <p id=printscoreinfo></p>
-
-         </div>
-
-
-  				
-  	  	</form>
-
-  	  </div>
-  	</div>
+  <nav class="d-flex justify-content-center container-fluid navbar navbar-light shadow p-3 mb-5 rounded border-bottom-0"
+    style="background-color: #003778">
+    <a class="navbar-brand">
+      <img src="img/LOGO SINDIPEÇAS BRANCO 1.png" width="326" height="72" alt="">
+    </a>
+  </nav>
+  <div>
+    <h2 class="container text-left mb-3"><b>Avaliação Sindipeças</b></h2>
   </div>
 
-  <script src="scripts.js"></script>
+  <div class="container d-flex justify-content-center bg-light rounded borda">
+    <div class="p-4 ml-3 mr-3">
+      <h2 class="mb-4"><b>Bem-vindo!</b></h2>
+      <p class="mb-4">O novo programa do Sindicato Nacional da Indústria de Componentes para Veículos Automotores busca
+        melhorar as condições salariais dos funcionários, preparando-os para negociar salários justos em um mercado
+        competitivo. Ofereceremos treinamento e recursos para fortalecer suas habilidades de negociação, garantindo um
+        padrão de vida adequado ao seu talento e contribuição para o setor. Isso reflete nosso compromisso com o
+        bem-estar e sucesso dos trabalhadores, visando tornar o setor mais equitativo e próspero.</p>
+      <div class="info mb-4">
+        <div class="d-flex justify-content-center">
+
+          <ul class="container p-4">
+            <p class="fas fa-info-circle"><b>Informações importantes</b></p>
+            <li><b>Proibição de Minimização da Tela:</b> Os candidatos não estão autorizados a minimizar, redimensionar
+              ou ocultar a tela da prova durante todo o período do exame.</li>
+            <li><b>Proibição de Pesquisas e Acessos Externos:</b> Os candidatos não podem acessar qualquer site,
+              aplicativo ou recurso externo durante o exame, incluindo motores de busca, redes sociais ou materiais de
+              referência não autorizados.</li>
+            <li><b>Bloqueio de Múltiplos Dispositivos:</b> Os candidatos devem realizar a prova em um único dispositivo,
+              com a proibição de utilizar dispositivos secundários, como smartphones, tablets ou computadores
+              adicionais.</li>
+            <li><b>Monitoramento por Webcam:</b> A prova pode ser monitorada por meio de webcam para garantir a presença
+              e a conduta adequada dos candidatos durante o exame.</li>
+          </ul>
+        </div>
+      </div>
+      <a href="questionarios.html">
+        <button type="button" class="btn botao">Iniciar Teste</button>
+      </a>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/jquery-3.3.1.slim.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="scripts.js"></script>
+  <script type="text/javascript" src="pwabuilder-sw.js"" ></script>
 </body>
+
 </html>
