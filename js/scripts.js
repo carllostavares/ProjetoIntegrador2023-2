@@ -48,8 +48,8 @@ function getInfoBasedOnScore(){
 
         // Defina os atributos do iframe
         iframe.src = "https://www.youtube.com/embed/hR_VC3EfxLs?si=yrUtZaIHJYydGuqu"; // URL do conteúdo do iframe
-        iframe.width = "560"; // Largura do iframe em pixels
-        iframe.height = "315"; // Altura do iframe em pixels
+        iframe.width = "auto"; // Largura do iframe em pixels
+        iframe.height = "auto"; // Altura do iframe em pixels
         iframe.frameBorder = "0"; // Desativar a borda do iframe (opcional)
     
         // Adicione o iframe ao elemento de contêiner na página
