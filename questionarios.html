@@ -3,17 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="App Web para realizar PROVAS! " />
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="application-name" content="PWA Workshop">
   <meta name="apple-mobile-web-app-title" content="PWA Workshop">
   <meta name="msapplication-starturl" content="/index.html">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Avaliação Sindipeças</title>
-  <link rel="manifest" href="manifest.json"> 
+  <meta name="author" content="" />
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/bootstrap.css" />
   <link rel="icon" href="img/LOGO SINDIPEÇAS azu;.png" type="image/png" />
+  <meta name="theme-color" content="#004193">
+
 </head>
 
 <body>
@@ -135,7 +138,7 @@
   <script type="text/javascript" src="/js/popper.min.js"></script>
   <script type="text/javascript" src="/js/bootstrap.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
-  <script type="text/javascript" src="pwabuilder-sw.js"" ></script>
+ 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const form = document.getElementById("meuform");
@@ -182,6 +185,18 @@
       showStep(currentStep);
     });
   </script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/seu-service-worker.js')
+          .then(function(registration) {
+            console.log('Service Worker registrado com sucesso:', registration);
+          })
+          .catch(function(error) {
+            console.log('Falha ao registrar o Service Worker:', error);
+          });
+      }
+    </script>
+
 </body>
 
 </html>

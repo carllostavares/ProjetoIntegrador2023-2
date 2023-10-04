@@ -2313,7 +2313,7 @@
 
       _proto._checkScrollbar = function _checkScrollbar() {
         var rect = document.body.getBoundingClientRect();
-        this._isBodyOverflowing = rect.left + rect.right < window.innerWidth;
+        this._isBodyOverflowing = rect.left + rect.right < window.outerWidth;
         this._scrollbarWidth = this._getScrollbarWidth();
       };
 
