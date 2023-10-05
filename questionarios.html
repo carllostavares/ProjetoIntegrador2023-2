@@ -18,6 +18,9 @@
   <script src="./js/location-api.js"></script>
   <meta name="theme-color" content="#004193">
 
+  <script src="./js/location-api.js"></script>
+  <script src="./js/camera-api.js"></script>
+
 </head>
 
 <body>
@@ -119,6 +122,7 @@
             </button>
             <div class="clearfix"></div>
           </div>
+          
 
           <div class="container step" id="step-6">
             <h2>Obrigado por responder esse questionário!</h2>
@@ -131,6 +135,15 @@
           </div>
 
         </form>
+
+      <!-- ADICIONANDO SOLICITAÇÃO DE CAMERA PARA VÍDEO -->
+        <div class="columns">
+          <div class="column" >
+            <p><button class="btn botao type=" button" onclick="getStream('video')">Autorizar uso da Câmera</button></p>
+            <video controls autoplay style="height:180px; width: 240px;"></video>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -139,7 +152,8 @@
   <script type="text/javascript" src="/js/popper.min.js"></script>
   <script type="text/javascript" src="/js/bootstrap.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
- 
+
+<!-- SCRIPT DO MANIFESTO -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const form = document.getElementById("meuform");

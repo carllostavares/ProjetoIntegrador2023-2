@@ -43,6 +43,14 @@ function totalScore(){
 
 function getInfoBasedOnScore(){
     if(totalScore() < 6){
+
+        // Remove os elementos com a classe "columns"
+        var columnsElements = document.getElementsByClassName("columns");
+        while (columnsElements.length > 0) {
+        columnsElements[0].parentNode.removeChild(columnsElements[0]);
+        }
+    
+
         var score_info = "Você tirou uma nota abaixo da média esperada! Continue estudado e tente novamente. \n Conheça a instituição do Senac e aumente seus conhecimentos:";
         var iframe = document.createElement("iframe");
 
@@ -57,8 +65,18 @@ function getInfoBasedOnScore(){
         container.appendChild(iframe);
     }if(totalScore() >= 6 && totalScore() < 8){
         var score_info = "Parabéns! Você tirou uma boa!";
+                // Remove os elementos com a classe "columns"
+                var columnsElements = document.getElementsByClassName("columns");
+                while (columnsElements.length > 0) {
+                columnsElements[0].parentNode.removeChild(columnsElements[0]);
+                }
     }if(totalScore() >=8){
         var score_info = "Parabéns! Você tirou uma excelente nota!";
+                // Remove os elementos com a classe "columns"
+                var columnsElements = document.getElementsByClassName("columns");
+                while (columnsElements.length > 0) {
+                columnsElements[0].parentNode.removeChild(columnsElements[0]);
+                }
     }
 
     return score_info;
