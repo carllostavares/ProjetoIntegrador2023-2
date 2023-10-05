@@ -15,7 +15,9 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin:1em;
 }
+
 
 @media (min-width: 640px) {
   .container {
