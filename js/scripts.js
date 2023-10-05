@@ -42,6 +42,9 @@ function totalScore(){
 }
 
 function getInfoBasedOnScore(){
+
+    var score_info = "";
+    
     if(totalScore() < 6){
 
         // Remove os elementos com a classe "columns"
@@ -66,8 +69,27 @@ function getInfoBasedOnScore(){
         // Adicione o iframe ao elemento de contêiner na página
         var container = document.getElementById("iframeContainer");
         container.appendChild(iframe);
+        
+        // Adicione o código HTML ao elemento de contêiner
+        var columnsDiv = document.createElement("div");
+        columnsDiv.className = "columns";
+        var columnDiv = document.createElement("div");
+        columnDiv.className = "column";
+        var button = document.createElement("button");
+        button.className = "btn botao";
+        button.type = "button";
+        button.textContent = "Sair";
+        // Adicione o evento de clique ao botão para redirecionar para index.html
+        button.addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
 
-    }if(totalScore() >= 6 && totalScore() < 8){
+        columnDiv.appendChild(button);
+        columnsDiv.appendChild(columnDiv);
+        container.appendChild(columnsDiv);
+
+    }
+    if(totalScore() >= 6 && totalScore() < 8){
         var score_info = "Parabéns! Você tirou uma boa!";
 
             // Remove os elementos com a classe "columns"
@@ -80,6 +102,30 @@ function getInfoBasedOnScore(){
             var navbarBrand = document.querySelector(".navbar-brand");
             navbarBrand.href = "index.html";
 
+           // Adicione o iframe ao elemento de contêiner na página
+        var iframe = document.createElement("iframe");
+        var container = document.getElementById("iframeContainer");
+
+        // Adicione o código HTML ao elemento de contêiner
+        var columnsDiv = document.createElement("div");
+        columnsDiv.className = "columns";
+        var columnDiv = document.createElement("div");
+        columnDiv.className = "column";
+        var button = document.createElement("button");
+        button.className = "btn botao";
+        button.type = "button";
+        button.textContent = "Sair";
+
+                // Adicione o evento de clique ao botão para redirecionar para index.html
+        button.addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+        columnDiv.appendChild(button);
+        columnsDiv.appendChild(columnDiv);
+        container.appendChild(columnsDiv);
+
+
     }if(totalScore() >=8){
         var score_info = "Parabéns! Você tirou uma excelente nota!";
 
@@ -88,11 +134,35 @@ function getInfoBasedOnScore(){
         while (columnsElements.length > 0) {
         columnsElements[0].parentNode.removeChild(columnsElements[0]);
         }
-        
+
         // Adicione o link para index.html à navbar-brand
         var navbarBrand = document.querySelector(".navbar-brand");
         navbarBrand.href = "index.html";
-    }
+
+         // Adicione o iframe ao elemento de contêiner na página
+        var iframe = document.createElement("iframe");
+        var container = document.getElementById("iframeContainer");
+
+        // Adicione o código HTML ao elemento de contêiner
+        var columnsDiv = document.createElement("div");
+        columnsDiv.className = "columns";
+        var columnDiv = document.createElement("div");
+        columnDiv.className = "column";
+        var button = document.createElement("button");
+        button.className = "btn botao";
+        button.type = "button";
+        button.textContent = "Sair";
+
+        // Adicione o evento de clique ao botão para redirecionar para index.html
+        button.addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+        columnDiv.appendChild(button);
+        columnsDiv.appendChild(columnDiv);
+        container.appendChild(columnsDiv);
+
+            }
 
     return score_info;
 }
