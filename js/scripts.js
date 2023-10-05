@@ -49,7 +49,10 @@ function getInfoBasedOnScore(){
         while (columnsElements.length > 0) {
         columnsElements[0].parentNode.removeChild(columnsElements[0]);
         }
-    
+
+        // Adicione o link para index.html à navbar-brand
+        var navbarBrand = document.querySelector(".navbar-brand");
+        navbarBrand.href = "index.html";
 
         var score_info = "Você tirou uma nota abaixo da média esperada! Continue estudado e tente novamente. \n Conheça a instituição do Senac e aumente seus conhecimentos:";
         var iframe = document.createElement("iframe");
@@ -63,20 +66,32 @@ function getInfoBasedOnScore(){
         // Adicione o iframe ao elemento de contêiner na página
         var container = document.getElementById("iframeContainer");
         container.appendChild(iframe);
+
     }if(totalScore() >= 6 && totalScore() < 8){
         var score_info = "Parabéns! Você tirou uma boa!";
-                // Remove os elementos com a classe "columns"
-                var columnsElements = document.getElementsByClassName("columns");
-                while (columnsElements.length > 0) {
-                columnsElements[0].parentNode.removeChild(columnsElements[0]);
-                }
+
+            // Remove os elementos com a classe "columns"
+            var columnsElements = document.getElementsByClassName("columns");
+            while (columnsElements.length > 0) {
+            columnsElements[0].parentNode.removeChild(columnsElements[0]);
+            }
+
+            // Adicione o link para index.html à navbar-brand
+            var navbarBrand = document.querySelector(".navbar-brand");
+            navbarBrand.href = "index.html";
+
     }if(totalScore() >=8){
         var score_info = "Parabéns! Você tirou uma excelente nota!";
-                // Remove os elementos com a classe "columns"
-                var columnsElements = document.getElementsByClassName("columns");
-                while (columnsElements.length > 0) {
-                columnsElements[0].parentNode.removeChild(columnsElements[0]);
-                }
+
+        // Remove os elementos com a classe "columns"
+        var columnsElements = document.getElementsByClassName("columns");
+        while (columnsElements.length > 0) {
+        columnsElements[0].parentNode.removeChild(columnsElements[0]);
+        }
+        
+        // Adicione o link para index.html à navbar-brand
+        var navbarBrand = document.querySelector(".navbar-brand");
+        navbarBrand.href = "index.html";
     }
 
     return score_info;
