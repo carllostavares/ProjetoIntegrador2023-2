@@ -12,18 +12,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Avaliação Sindipeças</title>
   <meta name="author" content="" />
-  <link rel="manifest" href="manifest.json"> 
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="img/LOGO SINDIPEÇAS azu;.png" type="image/png">
+  <script src="./js/location-api.js"></script>
+  <script src="./js/camera-api.js"></script>
   <meta name="theme-color" content="#004193">
 
 </head>
 
 <body>
-  <nav class="d-flex justify-content-center container-fluid navbar navbar-light shadow p-3 mb-5 rounded border-bottom-0"
-    style="background-color: #003778">
+  <nav class="d-flex justify-content-center container-fluid navbar navbar-light shadow p-3 mb-5 rounded border-bottom-0" style="background-color: #003778">
     <a class="navbar-brand">
       <img src="img/LOGO SINDIPEÇAS BRANCO 1.png" width="326" height="72" alt="">
     </a>
@@ -31,6 +32,8 @@
   <div>
     <h2 class="container text-left mb-3"><b>Avaliação Sindipeças</b></h2>
   </div>
+
+
 
   <div class="container d-flex justify-content-center bg-light rounded borda">
     <div class="p-4 ml-3 mr-3">
@@ -61,29 +64,36 @@
       <a href="questionarios.html">
         <button type="button" class="btn botao">Iniciar Teste</button>
       </a>
-    </div>
-  </div>
-  <script type="text/javascript" src="js/jquery-3.3.1.slim.min.js"></script>
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="scripts.js"></script>
+      <div class="columns">
+        <div class="column">
+          <p><button class="btn botao type=" button" onclick="getStream('video')">Autorizar uso da Câmera</button></p>
+          <video controls autoplay style="height:180px; width: 240px;"></video>
+        </div>
+      </div>
 
-  <script>
-    let newWorker;
-    if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js').then(reg => {
-        reg.addEventListener('updatefound', () => {
-        newWorker = reg.installing;
+
+    </div>
+    <script type="text/javascript" src="js/jquery-3.3.1.slim.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+
+    <script>
+      let newWorker;
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js').then(reg => {
+          reg.addEventListener('updatefound', () => {
+            newWorker = reg.installing;
+          });
         });
-    });
-    let refreshing;
-    navigator.serviceWorker.addEventListener('controllerchange', function () {
-        if (refreshing) return;
-        window.location.reload();
-        refreshing = true;
-    });
-    }
-</script>
+        let refreshing;
+        navigator.serviceWorker.addEventListener('controllerchange', function () {
+          if (refreshing) return;
+          window.location.reload();
+          refreshing = true;
+        });
+      }
+    </script>
 </body>
 
 </html>
